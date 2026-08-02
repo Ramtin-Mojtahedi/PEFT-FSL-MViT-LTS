@@ -1,0 +1,61 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated paper."
+title: "Parameter-Efficient Fine-Tuning and Few-Shot Learning of Multiscale Vision Transformers for Liver Tumour Segmentation in CT"
+type: software
+authors:
+  - family-names: Mojtahedi
+    given-names: Ramtin
+    orcid: "https://orcid.org/0000-0002-3953-3256"
+  - family-names: Hamghalam
+    given-names: Mohammad
+    orcid: "https://orcid.org/0000-0003-2543-0712"
+  - family-names: Peoples
+    given-names: "Jacob J."
+  - family-names: Jarnagin
+    given-names: "William R."
+    orcid: "https://orcid.org/0000-0002-1635-5768"
+  - family-names: Do
+    given-names: "Richard K. G."
+    orcid: "https://orcid.org/0000-0002-6554-0310"
+  - family-names: Simpson
+    given-names: "Amber L."
+    orcid: "https://orcid.org/0000-0002-4387-8417"
+repository-code: "https://github.com/Ramtin-Mojtahedi/PEFT-FSL-MViT-LTS"
+url: "https://github.com/Ramtin-Mojtahedi/PEFT-FSL-MViT-LTS"
+keywords:
+  - parameter-efficient fine-tuning
+  - low-rank adaptation
+  - few-shot learning
+  - liver tumour segmentation
+  - computed tomography
+  - medical imaging
+preferred-citation:
+  type: conference-paper
+  title: "Parameter-Efficient Fine-Tuning and Few-Shot Learning of Multiscale Vision Transformers for Liver Tumour Segmentation in CT"
+  authors:
+    - family-names: Mojtahedi
+      given-names: Ramtin
+      orcid: "https://orcid.org/0000-0002-3953-3256"
+    - family-names: Hamghalam
+      given-names: Mohammad
+      orcid: "https://orcid.org/0000-0003-2543-0712"
+    - family-names: Peoples
+      given-names: "Jacob J."
+    - family-names: Jarnagin
+      given-names: "William R."
+      orcid: "https://orcid.org/0000-0002-1635-5768"
+    - family-names: Do
+      given-names: "Richard K. G."
+      orcid: "https://orcid.org/0000-0002-6554-0310"
+    - family-names: Simpson
+      given-names: "Amber L."
+      orcid: "https://orcid.org/0000-0002-4387-8417"
+  conference:
+    name: "SPIE Medical Imaging 2025"
+  collection-title: "Medical Imaging 2025: Computer-Aided Diagnosis"
+  publisher:
+    name: SPIE
+  volume: 13407
+  year: 2025
+  doi: "10.1117/12.3046253"
+  url: "https://doi.org/10.1117/12.3046253"
