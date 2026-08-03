@@ -6,6 +6,44 @@ Research code snapshot accompanying:
 
 > Ramtin Mojtahedi, Mohammad Hamghalam, Jacob J. Peoples, William R. Jarnagin, Richard K. G. Do, and Amber L. Simpson. “Parameter-Efficient Fine-Tuning and Few-Shot Learning of Multiscale Vision Transformers for Liver Tumour Segmentation in CT.” *Medical Imaging 2025: Computer-Aided Diagnosis*, Proceedings of SPIE 13407, article 1340738 (2025). [https://doi.org/10.1117/12.3046253](https://doi.org/10.1117/12.3046253)
 
+<!-- repository-guide:start -->
+## At a glance
+
+[Paper](https://doi.org/10.1117/12.3046253) · [LoRA notebook](Notebooks/LORA.ipynb) · [Fine-tuning notebook](Notebooks/FineTune_Scratch.ipynb) · [Recorded results](Results/Results.md) · [`CITATION.cff`](CITATION.cff)
+
+### Dependency evidence
+
+| Package | Evidence in the notebooks |
+|---|---|
+| `torch` | Model construction, optimization, checkpoints |
+| `monai` | Transforms, Swin UNETR, losses, sliding-window inference, metrics |
+| `numpy` | Cached manifests and saved metric arrays |
+| `matplotlib` | Loss, metric, and timing plots |
+| `tqdm` | Training and validation progress |
+| `natsort` | File ordering |
+| `scipy` | Connected-component analysis |
+
+No dependency versions are recorded. `Models/ssl_pretrained_weights.pth` is a one-byte newline placeholder, not a checkpoint.
+
+### Workflow represented by the notebooks
+
+```mermaid
+flowchart LR
+    A["Authorized CT images and labels<br/>(not included) plus nonportable inline path lists"] --> B["MONAI preprocessing<br/>load · intensity scale · RAS orientation · spacing · crops/augmentation"]
+    B --> C["Swin UNETR plus Adaptive.pth<br/>(weight absent)"]
+    C --> D{"Experiment path"}
+    D --> E["Custom LoRA convolution wrappers"]
+    D --> F["Conventional fine-tuning"]
+    E --> G["DiceCE loss and AdamW"]
+    F --> G
+    G --> H["Sliding-window validation"]
+    H --> I["Dice and HD95"]
+    I --> J["Checkpoints · NumPy arrays · plots · result summary"]
+```
+
+> **Reproducibility boundary:** the committed cells record research-session workflows, including selected subset experiments, but the data, complete portable manifests, usable pretrained weight, exact split provenance, and pinned environment are absent.
+<!-- repository-guide:end -->
+
 ## Repository status
 
 This repository is an archival research snapshot, not a packaged or end-to-end reproducible software release. It contains two experiment notebooks and a written results summary. It does **not** contain the clinical CT dataset, segmentation labels, complete data manifests, a pinned software environment, or usable trained checkpoints.
