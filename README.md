@@ -1,3 +1,7 @@
+<img width="100%" src="https://raw.githubusercontent.com/Ramtin-Mojtahedi/Ramtin-Mojtahedi/main/assets/project-peft.svg" alt="Efficient adaptation: LoRA and few-shot learning for liver CT segmentation.">
+
+[Research profile](https://github.com/Ramtin-Mojtahedi) · [Project directory](https://github.com/Ramtin-Mojtahedi/Ramtin-Mojtahedi/blob/main/REPOSITORY_INDEX.md) · [Paper](https://doi.org/10.1117/12.3046253)
+
 # Parameter-Efficient Fine-Tuning and Few-Shot Learning of Multiscale Vision Transformers for Liver Tumour Segmentation in CT
 
 [![Paper DOI](https://img.shields.io/badge/DOI-10.1117%2F12.3046253-blue)](https://doi.org/10.1117/12.3046253)
